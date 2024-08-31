@@ -16,6 +16,6 @@ return {
 
     vim.keymap.set('i', '<C-r>', function()
       return vim.fn['copilot#Accept']('<CR>')
-    end, { noremap = true, silent = true, expr = true, script = true })
+    end, { noremap = true, silent = true, expr = true, script = true, replace_keycodes = false })
   end
 }
