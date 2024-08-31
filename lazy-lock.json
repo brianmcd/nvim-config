@@ -12,6 +12,5 @@
   "vim-signify": { "branch": "master", "commit": "8670143f9e12ed1cd3c9b2c54f345cdd9a4baac3" },
   "vim-terraform": { "branch": "master", "commit": "24de93afb05078bac6a2e966402cc1f672277708" },
   "vim-tmux-navigator": { "branch": "master", "commit": "5b3c701686fb4e6629c100ed32e827edf8dad01e" },
-  "vim-vue": { "branch": "master", "commit": "6ae8fa751fbe4c6605961d2309f8326873fa40a6" },
-  "vimwiki": { "branch": "dev", "commit": "705ad1e0dded0e3b7ff5fac78547ab67c9d39bdf" }
+  "vim-vue": { "branch": "master", "commit": "6ae8fa751fbe4c6605961d2309f8326873fa40a6" }
 }

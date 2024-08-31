@@ -45,9 +45,6 @@ return {
     vim.keymap.set('v', '<C-f>', 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', { noremap = true, silent = true, expr = true })
     vim.keymap.set('v', '<C-b>', 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', { noremap = true, silent = true, expr = true })
 
-    -- Highlight CocMenuSel with yellow background
-    vim.cmd('highlight CocMenuSel ctermbg=yellow')
-
     -- Show signature help when jumping to a placeholder
     vim.api.nvim_create_autocmd('User', {
       pattern = 'CocJumpPlaceholder',
