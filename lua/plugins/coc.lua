@@ -5,14 +5,14 @@ return {
     vim.api.nvim_set_keymap(
       'i',
       '<TAB>',
-      'coc#pum#visible() ? coc#pum#next(1) : CheckBackSpace() ? "<Tab>" : coc#refresh()',
+      'coc#pum#visible() ? coc#pum#next(1) : "<Tab>"',
       { noremap = true, silent = true, expr = true }
     )
 
     vim.api.nvim_set_keymap(
       'i',
       '<S-TAB>',
-      'coc#pum#visible() ? coc#pum#prev(1) : CheckBackSpace() ? "<Tab>" : coc#refresh()',
+      'coc#pum#visible() ? coc#pum#prev(1) : "<Tab>"',
       { noremap = true, silent = true, expr = true }
     )
 

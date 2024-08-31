@@ -1,7 +1,3 @@
-vim.opt.foldmethod = 'manual'
-vim.opt.foldnestmax = 10
-vim.opt.foldenable = false
-vim.opt.foldlevel = 2
 vim.opt.previewheight = 25
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
