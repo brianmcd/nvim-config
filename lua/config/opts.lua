@@ -17,3 +17,5 @@ vim.opt.backupcopy = 'yes'
 vim.opt.modeline = false
 vim.opt.list = true
 vim.opt.cmdheight = 2
+
+vim.opt.completeopt = { "menu", "menuone", "noselect" }

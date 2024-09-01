@@ -1,4 +1,5 @@
 return {
+  enabled = false,
   'neoclide/coc.nvim',
   branch = 'release',
   init = function()
