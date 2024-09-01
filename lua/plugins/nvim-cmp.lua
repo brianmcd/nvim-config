@@ -13,7 +13,7 @@ return {
   config = function ()
     local cmp = require("cmp")
 
-    -- TODO: see which of these I need and look for others.
+    -- TODO: see which of these keymappings
     cmp.setup{
       snippet = {
         expand = function(args)
@@ -62,7 +62,7 @@ return {
      },
      sources = cmp.config.sources({
        { name = "nvim_lsp" },
-       { name = "luasnip" },
+       { name = "luasnip" }, -- TODO: Do I need this?
        { name = "buffer" },
        { name = "path" },
      }),
