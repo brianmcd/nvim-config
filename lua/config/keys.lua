@@ -19,4 +19,3 @@ vim.keymap.set('n', '<Leader>s', ':%s/\\<' .. vim.fn.expand('<cword>') .. '\\>/'
 -- Tab navigation
 vim.keymap.set('n', '-', ':tabprev<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '=', ':tabnext<CR>', { noremap = true, silent = true })
-
