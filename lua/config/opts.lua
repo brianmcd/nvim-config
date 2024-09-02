@@ -13,7 +13,7 @@ vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.laststatus = 2
-vim.opt.statusline = '%t[%{strlen(&fenc)?&fenc:\'none\'},%{&ff}]%{FugitiveStatusline()}%h%m%r%y %=%c,%l/%L %P %{coc#status()}'
+vim.opt.statusline = '%t[%{strlen(&fenc)?&fenc:\'none\'},%{&ff}]%{FugitiveStatusline()}%h%m%r%y %=%c,%l/%L %P'
 vim.opt.backupcopy = 'yes'
 vim.opt.modeline = false
 vim.opt.list = true

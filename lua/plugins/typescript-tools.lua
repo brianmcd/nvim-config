@@ -7,8 +7,11 @@ return {
   },
   opts = {},
   config = function ()
-    vim.keymap.set('n', '<Leader>r', '<cmd>TSToolsRenameFile<CR>', { noremap = true, silent = true })
+    -- TSToolsGoToSourceDefinition is similar to vim.lsp.buf.definition, except it will never land on
+    -- .d.ts files and will instead find the actual definition. Useful for investigating node_modules.
     vim.keymap.set('n', 'gD', '<cmd>TSToolsGoToSourceDefinition<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<Leader>r', '<cmd>TSToolsRenameFile<CR>', { noremap = true, silent = true })
+    vim.keymap.set('n', '<Leader>i', '<cmd>TSToolsAddMissingImports<CR>', { noremap = true, silent = true })
 
     vim.api.nvim_create_user_command('O', 'TSToolsOrganizeImports', {})
 
