@@ -1,3 +1,4 @@
+vim.opt.termguicolors = false -- Setting this to true messed up syntax highlighting.
 vim.opt.previewheight = 25
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2

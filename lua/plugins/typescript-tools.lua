@@ -9,7 +9,12 @@ return {
   config = function ()
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
     require('typescript-tools').setup {
-      capabilities = capabilities
+      capabilities = capabilities,
+      on_attach = function(client)
+        -- After the LSP attaches, it changes the syntax highlighting and made things
+        -- look worse. This disables the LSP-based syntax highlighting.
+        client.server_capabilities.semanticTokensProvider = nil
+      end
     }
   end
 }
