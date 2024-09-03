@@ -1,5 +1,4 @@
 vim.keymap.set('n', '<Leader>q', ':q<CR>', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>w', ':w<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>j', 'i<CR><ESC>', { noremap = true, silent = true })
 vim.keymap.set('n', '<C-n>', ':tabnew<CR>', { noremap = true, silent = true })
 vim.keymap.set('n', '<Leader>x', '<Plug>window:quickfix:toggle', { silent = true })
