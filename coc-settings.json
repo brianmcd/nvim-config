@@ -1,8 +1,0 @@
-{
-  "coc.preferences.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
-  "suggest.noselect": true,
-  "tsserver.experimental.enableProjectDiagnostics": true,
-  "tsserver.useLocalTsdk": true,
-  "typescript.updateImportsOnFileMove.enabled": "prompt"
-}
