@@ -14,6 +14,7 @@ return {
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
     vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
     vim.keymap.set('n', '<leader>fd', builtin.diagnostics, {})
+    vim.keymap.set('n', '<leader>fw', builtin.grep_string, {})
     vim.keymap.set('n', 'gr', builtin.lsp_references, {})
   end
 }

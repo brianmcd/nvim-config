@@ -5,7 +5,6 @@ return {
     "nvim-lua/plenary.nvim",
     "neovim/nvim-lspconfig"
   },
-  opts = {},
   config = function ()
     -- TSToolsGoToSourceDefinition is similar to vim.lsp.buf.definition, except it will never land on
     -- .d.ts files and will instead find the actual definition. Useful for investigating node_modules.
