@@ -13,7 +13,17 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { noremap = true, silent = true })
 vim.keymap.set('n', '<F4>', ':set hlsearch! hlsearch?<CR>', { noremap = true, silent = true })
 
 -- Replace word under cursor
-vim.keymap.set('n', '<Leader>s', ':%s/\\<' .. vim.fn.expand('<cword>') .. '\\>/', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>s', function()
+  local word = vim.fn.expand('<cword>')
+  -- Prompt for the replacement word
+  local replacement = vim.fn.input('Replace "' .. word .. '" with: ')
+  if replacement ~= "" then
+    -- Prompt for substitution flags (e.g., g, gc)
+    local flags = vim.fn.input('Flags (e.g., g, gc): ')
+    -- Perform the substitution with the specified flags
+    vim.cmd(':%s/\\<' .. word .. '\\>/' .. replacement .. '/' .. flags)
+  end
+end, { noremap = true, silent = false })
 
 -- Tab navigation
 vim.keymap.set('n', '-', ':tabprev<CR>', { noremap = true, silent = true })
