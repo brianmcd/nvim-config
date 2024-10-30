@@ -1,5 +1,5 @@
 return {
-  enabled = false,
+  enabled = true,
   "pmizio/typescript-tools.nvim",
   dependencies = {
     'hrsh7th/cmp-nvim-lsp',

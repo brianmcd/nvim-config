@@ -7,7 +7,8 @@ return {
     require("mason").setup()
 
     require("mason-lspconfig").setup {
-      ensure_installed = { "eslint", "ts_ls", "volar" },
+      --ensure_installed = { "eslint", "ts_ls", "volar" },
+      ensure_installed = { "eslint" },
       automatic_installation = true,
     }
 
@@ -27,6 +28,7 @@ return {
           end,
         }
       end,
+      --[[
       ["ts_ls"] = function ()
         local mason_packages = vim.fn.stdpath("data") .. "/mason/packages"
         local volar_path = mason_packages .. "/vue-language-server/node_modules/@vue/language-server"
@@ -37,6 +39,11 @@ return {
             -- After the LSP attaches, it changes the syntax highlighting and made things
             -- look worse. This disables the LSP-based syntax highlighting.
             client.server_capabilities.semanticTokensProvider = nil
+          end,
+          on_init = function(client, initialization_result)
+            if client.server_capabilities then
+              client.server_capabilities.semanticTokensProvider = nil
+            end
           end,
           init_options = {
             plugins = {
@@ -63,6 +70,7 @@ return {
           },
         })
       end
+      --]]
     }
   end
 }
