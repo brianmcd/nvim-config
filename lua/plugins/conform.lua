@@ -11,6 +11,7 @@ return {
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         vue = { "prettier" },
+        rust = { "rustfmt" },
         ["_"] = { "trim_whitespace" },
       },
       format_on_save = {
