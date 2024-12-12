@@ -19,11 +19,19 @@ return {
 
     require('typescript-tools').setup {
       capabilities = capabilities,
+      on_init = function(client, initialization_result)
+        if client.server_capabilities then
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.semanticTokensProvider = false
+        end
+      end,
+      --[[
       on_attach = function(client)
         -- After the LSP attaches, it changes the syntax highlighting and made things
         -- look worse. This disables the LSP-based syntax highlighting.
         client.server_capabilities.semanticTokensProvider = nil
       end
+      --]]
     }
   end
 }
