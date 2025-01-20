@@ -8,6 +8,7 @@ return {
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         json = { "prettier" },
+        jsonc = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         vue = { "prettier" },
