@@ -9,6 +9,7 @@ return {
         javascriptreact = { "prettier" },
         json = { "prettier" },
         jsonc = { "prettier" },
+        terraform = { "terraform_fmt" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         vue = { "prettier" },
