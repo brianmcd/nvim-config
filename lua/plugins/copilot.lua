@@ -10,6 +10,7 @@ return {
       ['javascript'] = true,
       ['graphql'] = true,
       ['vue'] = true,
+      ['terraform'] = true,
     }
 
     vim.g.copilot_no_tab_map = true
