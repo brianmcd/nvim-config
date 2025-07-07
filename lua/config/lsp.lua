@@ -1,19 +1,21 @@
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if not client then return end
-    local bufnr = ev.buf
-    local server_name = client.name
-
-    -- There's a regression somewhere that causes this to fail.
-    --if server_name == "eslint" then
-    --vim.api.nvim_create_autocmd("BufWritePre", {
-      --buffer = bufnr,
-      --command = "eslint.applyAllFixes",
-      --})
-      --end
-    end
-  })
+vim.lsp.config('eslint', {
+  on_attach = function(client, buffer)
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      buffer = buffer,
+      callback = function(event)
+        local namespace = vim.lsp.diagnostic.get_namespace(client.id, true)
+        local diagnostics = vim.diagnostic.get(event.buf, { namespace = namespace })
+        local eslint = function(formatter) return formatter.name == 'eslint' end
+        if #diagnostics > 0 then vim.lsp.buf.format({ async = false, filter = eslint }) end
+      end,
+    })
+  end,
+  settings = {
+    format = { enable = true },
+    workingDirectory = { mode = 'auto' },
+    codeActionOnSave = { enable = true, mode = 'problems' },
+  },
+})
 
 vim.api.nvim_create_autocmd({ "LspAttach" }, {
   desc = "Disable semantic tokens for typescript",
